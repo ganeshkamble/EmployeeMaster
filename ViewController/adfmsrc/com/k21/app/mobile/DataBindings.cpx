@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.9.1" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.k21.app.mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/home.amx" usageId="com_k21_app_mobile_homePageDef"/>
+    <page path="/employeeDetails.amx" usageId="com_k21_app_mobile_employeeDetailsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_k21_app_mobile_homePageDef" path="com.k21.app.mobile.pageDefs.homePageDef"/>
+    <page id="com_k21_app_mobile_employeeDetailsPageDef" path="com.k21.app.mobile.pageDefs.employeeDetailsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="EmployeeProfileDC" path="com.k21.app.application.EmployeeProfileDC"/>
+  </dataControlUsages>
+</Application>

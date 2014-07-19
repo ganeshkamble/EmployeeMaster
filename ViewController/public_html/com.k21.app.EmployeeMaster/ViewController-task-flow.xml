@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="ViewController-task-flow">
+    <default-activity>home</default-activity>
+    <view id="home">
+      <page>/home.amx</page>
+    </view>
+    <view id="employeeDetails">
+      <page>/employeeDetails.amx</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>home</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>getEmployeeDetails</from-outcome>
+        <to-activity-id>employeeDetails</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-mobile-config>

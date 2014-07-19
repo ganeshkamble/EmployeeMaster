@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="Employee Master" id="ot1"/>
+    </amx:facet>
+    <amx:facet nClciame="primary">
+      <amx:commandButton id="cb1" text="Back" action="__back"/>
+    </amx:facet>
+    <amx:panelFormLayout id="pfl1">
+      <amx:panelLabelAndMessage label="Employee Name" id="plam1">
+        <amx:outputText value="#{bindings.name.inputValue}" id="ot3"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="Employee Id" id="plam2">
+        <amx:outputText value="#{bindings.employeeId.inputValue}" id="ot4"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="Department" id="plam5">
+        <amx:outputText value="#{bindings.department.inputValue}" id="ot7"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="Designation" id="plam4">
+        <amx:outputText value="#{bindings.designation.inputValue}" id="ot6"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="Salary" id="plam3">
+        <amx:outputText value="#{bindings.salary.inputValue}" id="ot5">
+          <amx:convertNumber groupingUsed="false" id="cn1"/>
+        </amx:outputText>
+      </amx:panelLabelAndMessage>
+    </amx:panelFormLayout>
+    <amx:facet name="footer">
+      <amx:outputText value="Copyrights" id="ot2" inlineStyle="font-size:x-small;"/>
+    </amx:facet>
+  </amx:panelPage>
+</amx:view>

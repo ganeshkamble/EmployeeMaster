@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.9.1" id="employeeDetailsPageDef"
+                Package="com.k21.app.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="fetchEmployeeDetails.result" DataControl="EmployeeProfileDC" RangeSize="25"
+                    BeanClass="com.k21.app.application.EmployeeProfileDC.fetchEmployeeDetails.Return"
+                    id="fetchEmployeeDetailsIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="fetchEmployeeDetails" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="fetchEmployeeDetails" IsViewObjectMethod="false" DataControl="EmployeeProfileDC"
+                  InstanceName="data.EmployeeProfileDC"
+                  ReturnName="data.EmployeeProfileDC.methodResults.fetchEmployeeDetails_EmployeeProfileDC_fetchEmployeeDetails_result">
+      <NamedData NDName="arg0" NDValue="#{data.com_k21_app_mobile_homePageDef.arg0.inputValue}"
+                 NDType="java.lang.String"/>
+    </methodAction>
+    <attributeValues IterBinding="fetchEmployeeDetailsIterator" id="name">
+      <AttrNames>
+        <Item Value="name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fetchEmployeeDetailsIterator" id="employeeId">
+      <AttrNames>
+        <Item Value="employeeId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fetchEmployeeDetailsIterator" id="department">
+      <AttrNames>
+        <Item Value="department"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fetchEmployeeDetailsIterator" id="designation">
+      <AttrNames>
+        <Item Value="designation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fetchEmployeeDetailsIterator" id="salary">
+      <AttrNames>
+        <Item Value="salary"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>
